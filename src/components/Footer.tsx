@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/10 pt-8 text-center text-xs text-background/30">
-          © {new Date().getFullYear()} SteelRoll. All rights reserved.
+          © {new Date().getFullYear()} National Ispat Udyog. All rights reserved.
         </div>
       </div>
     </footer>
