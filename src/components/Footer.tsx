@@ -34,7 +34,7 @@ const Footer = () => {
             <p className="font-heading font-semibold mb-4 text-xs uppercase tracking-[0.15em] text-background/70">Reach Us</p>
             <ul className="space-y-2.5 text-sm text-background/50">
               <li>+91 98765 43210</li>
-              <li>info@steelroll.com</li>
+              <li>info@nationalispatudyog.com</li>
               <li>Maharashtra, India</li>
             </ul>
           </div>
