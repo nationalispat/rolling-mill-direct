@@ -4,8 +4,8 @@ const Footer = () => {
       <div className="container">
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div className="sm:col-span-2 md:col-span-1">
-            <p className="font-heading text-lg font-extrabold tracking-tight mb-3">
-              STEEL<span className="text-forge">ROLL</span>
+            <p className="font-heading text-base font-extrabold tracking-tight mb-3">
+              NATIONAL <span className="text-forge">ISPAT</span> UDYOG
             </p>
             <p className="text-background/50 text-sm leading-relaxed max-w-[220px]">
               Premium steel bars and rods for construction, infrastructure, and industry.
