@@ -1,10 +1,10 @@
 import heroImage from "@/assets/hero-rolling-mill.jpg";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center">
+    <section id="home" className="relative min-h-screen flex items-center">
       <img
         src={heroImage}
         alt="Rolling mill steel production with molten bars and industrial machinery"
@@ -15,27 +15,41 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-hero-overlay" />
 
       <div className="container relative z-10 pt-20">
-        <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forge/20 border border-forge/30 mb-6">
-            <span className="w-2 h-2 rounded-full bg-forge animate-pulse" />
-            <span className="text-forge text-sm font-medium">Precision Steel Manufacturing</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary-foreground leading-tight mb-6">
-            Forging Strength,{" "}
-            <span className="text-forge">Rolling Excellence</span>
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/75 max-w-lg mb-8 font-light leading-relaxed">
-            Premium quality steel bars and rods manufactured with cutting-edge
-            technology to meet the highest industry standards.
+        <div className="max-w-xl">
+          <p className="text-forge text-sm font-medium tracking-[0.2em] uppercase mb-5">
+            Precision Steel Manufacturing
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-forge hover:bg-forge-dark text-accent-foreground font-semibold text-base gap-2">
-              Explore Products <ArrowRight size={18} />
+          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-heading font-extrabold text-primary-foreground leading-[1.1] mb-6">
+            Quality Steel,<br />Built to Last.
+          </h1>
+          <p className="text-base md:text-lg text-primary-foreground/65 max-w-md mb-10 leading-relaxed font-light">
+            Premium steel bars and rods manufactured with cutting-edge technology, meeting the highest industry standards.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button size="lg" className="bg-forge hover:bg-forge-dark text-accent-foreground font-semibold rounded-full px-8 gap-2">
+              Our Products <ArrowRight size={16} />
             </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base gap-2">
-              <Phone size={18} /> Contact Us
+            <Button size="lg" variant="ghost" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 font-medium rounded-full px-8">
+              Contact Us
             </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Bottom stats bar */}
+      <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border">
+        <div className="container py-5 flex flex-wrap justify-center md:justify-between gap-6 md:gap-0">
+          {[
+            { value: "25+", label: "Years Experience" },
+            { value: "50K+", label: "Tons / Year" },
+            { value: "ISO", label: "Certified" },
+            { value: "100%", label: "Quality Tested" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center px-4">
+              <p className="font-heading text-xl md:text-2xl font-bold text-foreground">{stat.value}</p>
+              <p className="text-muted-foreground text-xs mt-0.5">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

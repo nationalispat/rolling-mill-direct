@@ -5,79 +5,56 @@ import { Textarea } from "@/components/ui/textarea";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-section-alt">
+    <section id="contact" className="py-24 md:py-32 bg-section-alt">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-forge font-semibold text-sm uppercase tracking-widest mb-3">Get In Touch</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Let's Build{" "}
-            <span className="text-gradient-steel">Together</span>
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Request a quote, ask about custom orders, or schedule a facility visit.
-          </p>
-        </div>
+        <div className="grid lg:grid-cols-5 gap-16">
+          <div className="lg:col-span-2">
+            <p className="text-forge font-semibold text-xs uppercase tracking-[0.2em] mb-4">Contact</p>
+            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-foreground leading-tight mb-8">
+              Let's work together.
+            </h2>
 
-        <div className="grid md:grid-cols-5 gap-12">
-          {/* Contact info */}
-          <div className="md:col-span-2 space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-forge/10 flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5 text-forge" />
-              </div>
-              <div>
-                <p className="font-heading font-semibold text-foreground mb-1">Phone</p>
-                <p className="text-muted-foreground text-sm">+91 98765 43210</p>
-                <p className="text-muted-foreground text-sm">+91 98765 43211</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-forge/10 flex items-center justify-center shrink-0">
-                <Mail className="w-5 h-5 text-forge" />
-              </div>
-              <div>
-                <p className="font-heading font-semibold text-foreground mb-1">Email</p>
-                <p className="text-muted-foreground text-sm">info@steelroll.com</p>
-                <p className="text-muted-foreground text-sm">sales@steelroll.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-forge/10 flex items-center justify-center shrink-0">
-                <MapPin className="w-5 h-5 text-forge" />
-              </div>
-              <div>
-                <p className="font-heading font-semibold text-foreground mb-1">Factory Address</p>
-                <p className="text-muted-foreground text-sm">
-                  Industrial Area, Phase II,<br />
-                  Steel City, Maharashtra 431001
-                </p>
-              </div>
+            <div className="space-y-6">
+              {[
+                { icon: Phone, label: "Phone", lines: ["+91 98765 43210", "+91 98765 43211"] },
+                { icon: Mail, label: "Email", lines: ["info@steelroll.com", "sales@steelroll.com"] },
+                { icon: MapPin, label: "Address", lines: ["Industrial Area, Phase II", "Steel City, Maharashtra 431001"] },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
+                    <item.icon className="w-4 h-4 text-muted-foreground" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground text-sm mb-0.5">{item.label}</p>
+                    {item.lines.map((line) => (
+                      <p key={line} className="text-muted-foreground text-sm">{line}</p>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Contact form */}
-          <form className="md:col-span-3 bg-card border border-border rounded-lg p-6 md:p-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+          <form className="lg:col-span-3 bg-card border border-border rounded-2xl p-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Full Name</label>
-                <Input placeholder="Your name" />
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
+                <Input placeholder="Your name" className="rounded-lg" />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Phone Number</label>
-                <Input placeholder="+91 XXXXX XXXXX" />
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
+                <Input placeholder="+91 XXXXX XXXXX" className="rounded-lg" />
               </div>
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-              <Input type="email" placeholder="you@company.com" />
+              <Input type="email" placeholder="you@company.com" className="rounded-lg" />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-              <Textarea rows={4} placeholder="Tell us about your requirements — product type, quantity, delivery timeline..." />
+              <Textarea rows={4} placeholder="Product type, quantity, delivery timeline..." className="rounded-lg" />
             </div>
-            <Button type="submit" size="lg" className="w-full bg-forge hover:bg-forge-dark text-accent-foreground font-semibold">
+            <Button type="submit" size="lg" className="w-full bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-full">
               Send Enquiry
             </Button>
           </form>

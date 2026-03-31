@@ -9,7 +9,7 @@ const products = [
   },
   {
     name: "Mild Steel Round Bars",
-    description: "Versatile round bars for general engineering and fabrication purposes.",
+    description: "Versatile round bars for general engineering and fabrication.",
     specs: ["IS 2062 grade", "8mm to 50mm diameter", "Smooth & consistent finish"],
   },
   {
@@ -21,37 +21,32 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section id="products" className="py-20 md:py-28">
+    <section id="products" className="py-24 md:py-32 bg-section-alt">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-forge font-semibold text-sm uppercase tracking-widest mb-3">Our Products</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Steel Products You Can{" "}
-            <span className="text-gradient-steel">Rely On</span>
+        <div className="text-center max-w-lg mx-auto mb-16">
+          <p className="text-forge font-semibold text-xs uppercase tracking-[0.2em] mb-4">Products</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-foreground leading-tight">
+            Steel you can rely on.
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Manufactured with precision and tested rigorously, our range of
-            steel bars and rods meet every structural demand.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <img
             src={productsImage}
-            alt="High quality steel bars and rods in warehouse"
+            alt="High quality steel bars and rods"
             loading="lazy"
             width={1280}
             height={960}
-            className="rounded-lg shadow-xl w-full object-cover aspect-[4/3] sticky top-24"
+            className="rounded-2xl w-full object-cover aspect-[4/3] lg:sticky lg:top-24"
           />
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {products.map((product) => (
               <div
                 key={product.name}
-                className="bg-card border border-border rounded-lg p-6 hover:shadow-lg hover:border-forge/30 transition-all duration-300"
+                className="bg-card rounded-xl p-6 border border-border hover:border-forge/40 transition-colors duration-300"
               >
-                <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+                <h3 className="font-heading text-lg font-bold text-foreground mb-1.5">
                   {product.name}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">
@@ -59,7 +54,7 @@ const ProductsSection = () => {
                 </p>
                 <ul className="space-y-2">
                   {product.specs.map((spec) => (
-                    <li key={spec} className="flex items-center gap-2 text-sm text-foreground">
+                    <li key={spec} className="flex items-center gap-2.5 text-sm text-foreground">
                       <CheckCircle className="w-4 h-4 text-forge shrink-0" />
                       {spec}
                     </li>
