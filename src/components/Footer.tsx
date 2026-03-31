@@ -4,8 +4,8 @@ const Footer = () => {
       <div className="container">
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div className="sm:col-span-2 md:col-span-1">
-            <p className="font-heading text-lg font-extrabold tracking-tight mb-3">
-              STEEL<span className="text-forge">ROLL</span>
+            <p className="font-heading text-base font-extrabold tracking-tight mb-3">
+              NATIONAL <span className="text-forge">ISPAT</span> UDYOG
             </p>
             <p className="text-background/50 text-sm leading-relaxed max-w-[220px]">
               Premium steel bars and rods for construction, infrastructure, and industry.
@@ -34,14 +34,14 @@ const Footer = () => {
             <p className="font-heading font-semibold mb-4 text-xs uppercase tracking-[0.15em] text-background/70">Reach Us</p>
             <ul className="space-y-2.5 text-sm text-background/50">
               <li>+91 98765 43210</li>
-              <li>info@steelroll.com</li>
+              <li>info@nationalispatudyog.com</li>
               <li>Maharashtra, India</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-background/10 pt-8 text-center text-xs text-background/30">
-          © {new Date().getFullYear()} SteelRoll. All rights reserved.
+          © {new Date().getFullYear()} National Ispat Udyog. All rights reserved.
         </div>
       </div>
     </footer>

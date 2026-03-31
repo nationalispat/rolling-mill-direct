@@ -17,7 +17,7 @@ const ContactSection = () => {
             <div className="space-y-6">
               {[
                 { icon: Phone, label: "Phone", lines: ["+91 98765 43210", "+91 98765 43211"] },
-                { icon: Mail, label: "Email", lines: ["info@steelroll.com", "sales@steelroll.com"] },
+                { icon: Mail, label: "Email", lines: ["info@nationalispatudyog.com", "sales@nationalispatudyog.com"] },
                 { icon: MapPin, label: "Address", lines: ["Industrial Area, Phase II", "Steel City, Maharashtra 431001"] },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
