@@ -39,7 +39,7 @@ const GallerySection = () => {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-16">
           {stockyardImages.map((img) => (
-            <div key={img.label} className="group relative overflow-hidden rounded-xl aspect-[4/3]">
+            <div key={img.label} className="group relative overflow-hidden rounded-xl aspect-[3/4]">
               <img
                 src={img.src}
                 alt={img.alt}
