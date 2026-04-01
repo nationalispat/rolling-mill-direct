@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       <div className="container relative z-10 pt-20">
         <div className="max-w-xl">
-          <p className="text-forge text-sm font-medium tracking-[0.2em] uppercase mb-5">
+          <p className="text-white/70 text-sm font-medium tracking-[0.2em] uppercase mb-5">
             Precision Steel Manufacturing
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-heading font-extrabold text-primary-foreground leading-[1.1] mb-6">
