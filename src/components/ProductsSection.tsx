@@ -1,4 +1,4 @@
-import productsImage from "@/assets/steel-products.jpg";
+import productsImage from "@/assets/stockyard-4.jpg";
 import { CheckCircle } from "lucide-react";
 
 const products = [
