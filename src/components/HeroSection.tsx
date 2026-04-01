@@ -26,7 +26,7 @@ const HeroSection = () => {
             Premium steel bars and rods manufactured with cutting-edge technology, meeting the highest industry standards.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button size="lg" className="bg-forge hover:bg-forge-dark text-accent-foreground font-semibold rounded-full px-8 gap-2">
+            <Button size="lg" className="bg-white text-foreground hover:bg-white/90 font-semibold rounded-full px-8 gap-2">
               Our Products <ArrowRight size={16} />
             </Button>
             <Button size="lg" variant="ghost" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 font-medium rounded-full px-8">
