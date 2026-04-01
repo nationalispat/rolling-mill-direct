@@ -1,4 +1,4 @@
-import facilityImage from "@/assets/facility.jpg";
+import facilityImage from "@/assets/stockyard-2.jpg";
 
 const AboutSection = () => {
   return (
