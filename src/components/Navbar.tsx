@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoIcon from "@/assets/logo-icon.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Products", href: "#products" },
-  { label: "Why Us", href: "#why-us" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -16,8 +17,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-[72px]">
-        <a href="#home" className="font-heading text-base md:text-lg font-extrabold text-foreground tracking-tight">
-          NATIONAL <span className="text-forge">ISPAT</span> UDYOG
+        <a href="#home" className="flex items-center gap-2.5">
+          <img src={logoIcon} alt="National Ispat Udyog" className="h-8 w-auto" />
+          <span className="font-heading text-sm md:text-base font-extrabold text-foreground tracking-tight leading-tight">
+            NATIONAL<br className="md:hidden" /> <span className="text-steel">ISPAT</span> UDYOG
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
