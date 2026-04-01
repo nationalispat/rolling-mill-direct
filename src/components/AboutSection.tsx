@@ -12,7 +12,7 @@ const AboutSection = () => {
               loading="lazy"
               width={1280}
               height={960}
-              className="rounded-2xl w-full object-cover aspect-[4/3]"
+              className="rounded-2xl w-full object-cover aspect-[3/4]"
             />
           </div>
 
