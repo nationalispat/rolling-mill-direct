@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       <div className="container relative z-10 pt-20">
         <div className="max-w-xl">
-          <p className="text-forge text-sm font-medium tracking-[0.2em] uppercase mb-5">
+          <p className="text-white/70 text-sm font-medium tracking-[0.2em] uppercase mb-5">
             Precision Steel Manufacturing
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-heading font-extrabold text-primary-foreground leading-[1.1] mb-6">
@@ -26,7 +26,7 @@ const HeroSection = () => {
             Premium steel bars and rods manufactured with cutting-edge technology, meeting the highest industry standards.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button size="lg" className="bg-forge hover:bg-forge-dark text-accent-foreground font-semibold rounded-full px-8 gap-2">
+            <Button size="lg" className="bg-white text-foreground hover:bg-white/90 font-semibold rounded-full px-8 gap-2">
               Our Products <ArrowRight size={16} />
             </Button>
             <Button size="lg" variant="ghost" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 font-medium rounded-full px-8">
