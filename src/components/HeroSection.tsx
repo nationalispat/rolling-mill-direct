@@ -40,9 +40,8 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border">
         <div className="container py-5 flex flex-wrap justify-center md:justify-between gap-6 md:gap-0">
           {[
-            { value: "25+", label: "Years Experience" },
-            { value: "50K+", label: "Tons / Year" },
-            { value: "ISO", label: "Certified" },
+            { value: "35+", label: "Years Experience" },
+            { value: "5K+", label: "Tons / Year" },
             { value: "100%", label: "Quality Tested" },
           ].map((stat) => (
             <div key={stat.label} className="text-center px-4">

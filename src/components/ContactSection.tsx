@@ -16,9 +16,9 @@ const ContactSection = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Phone, label: "Phone", lines: ["+91 98765 43210", "+91 98765 43211"] },
-                { icon: Mail, label: "Email", lines: ["info@nationalispatudyog.com", "sales@nationalispatudyog.com"] },
-                { icon: MapPin, label: "Address", lines: ["Industrial Area, Phase II", "Steel City, Maharashtra 431001"] },
+                { icon: Phone, label: "Phone", lines: ["+91 9215225200", "+91 9813332252"] },
+                { icon: Mail, label: "Email", lines: ["nationalispat1@gmail.com"] },
+                { icon: MapPin, label: "Address", lines: ["Jaurasi Road, Samalkha", "Panipat, Haryana 132101"] },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
@@ -32,6 +32,18 @@ const ContactSection = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Address Video */}
+            <div className="mt-8 rounded-2xl overflow-hidden border border-border">
+              <video
+                src="/videos/address-video.mp4"
+                controls
+                className="w-full aspect-video object-cover"
+                preload="metadata"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
