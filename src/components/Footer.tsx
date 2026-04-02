@@ -13,7 +13,7 @@ const Footer = () => {
               </p>
             </div>
             <p className="text-background/50 text-sm leading-relaxed max-w-[220px]">
-              Premium steel bars and rods for construction, infrastructure, and industry.
+              Reliable steel bars and rods for construction, infrastructure, fabrication and industry.
             </p>
           </div>
 
