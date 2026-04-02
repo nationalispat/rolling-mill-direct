@@ -23,7 +23,7 @@ const HeroSection = () => {
             Quality Steel,<br />Built to Last.
           </h1>
           <p className="text-base md:text-lg text-primary-foreground/65 max-w-md mb-10 leading-relaxed font-light">
-            Premium steel bars and rods manufactured with cutting-edge technology, meeting the highest industry standards.
+            Reliable steel bars and rods for construction, infrastructure, fabrication and industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Button size="lg" className="bg-white text-foreground hover:bg-white/90 font-semibold rounded-full px-8 gap-2">
@@ -40,9 +40,8 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border">
         <div className="container py-5 flex flex-wrap justify-center md:justify-between gap-6 md:gap-0">
           {[
-            { value: "25+", label: "Years Experience" },
-            { value: "50K+", label: "Tons / Year" },
-            { value: "ISO", label: "Certified" },
+            { value: "35+", label: "Years Experience" },
+            { value: "5K+", label: "Tons / Year" },
             { value: "100%", label: "Quality Tested" },
           ].map((stat) => (
             <div key={stat.label} className="text-center px-4">
