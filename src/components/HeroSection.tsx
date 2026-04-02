@@ -23,7 +23,7 @@ const HeroSection = () => {
             Quality Steel,<br />Built to Last.
           </h1>
           <p className="text-base md:text-lg text-primary-foreground/65 max-w-md mb-10 leading-relaxed font-light">
-            Premium steel bars and rods manufactured with cutting-edge technology, meeting the highest industry standards.
+            Reliable steel bars and rods for construction, infrastructure, fabrication and industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Button size="lg" className="bg-white text-foreground hover:bg-white/90 font-semibold rounded-full px-8 gap-2">
