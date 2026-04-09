@@ -6,6 +6,7 @@ import WhyUsSection from "@/components/WhyUsSection";
 import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <GallerySection />
       <ContactSection />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
