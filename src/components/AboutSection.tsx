@@ -1,11 +1,12 @@
 import facilityImage from "@/assets/stockyard-2.jpg";
+import ScrollReveal from "./ScrollReveal";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 md:py-32">
+    <section id="about" className="py-24 md:py-32 overflow-hidden">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div className="relative">
+          <ScrollReveal variant="fade-left">
             <img
               src={facilityImage}
               alt="Our modern rolling mill facility"
@@ -14,9 +15,9 @@ const AboutSection = () => {
               height={960}
               className="rounded-2xl w-full object-cover aspect-[3/4]"
             />
-          </div>
+          </ScrollReveal>
 
-          <div>
+          <ScrollReveal variant="fade-right">
             <p className="text-forge font-semibold text-xs uppercase tracking-[0.2em] mb-4">About Us</p>
             <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-foreground leading-tight mb-6">
               Decades of trust in every bar we roll.
@@ -32,7 +33,7 @@ const AboutSection = () => {
               Our commitment to innovation and sustainability keeps us at the forefront
               of the steel manufacturing industry.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
