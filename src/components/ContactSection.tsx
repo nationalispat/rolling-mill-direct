@@ -2,13 +2,14 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import ScrollReveal from "./ScrollReveal";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-section-alt">
+    <section id="contact" className="py-24 md:py-32 bg-section-alt overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-5 gap-16">
-          <div className="lg:col-span-2">
+          <ScrollReveal variant="fade-left" className="lg:col-span-2">
             <p className="text-forge font-semibold text-xs uppercase tracking-[0.2em] mb-4">Contact</p>
             <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-foreground leading-tight mb-8">
               Let's work together.
@@ -34,7 +35,6 @@ const ContactSection = () => {
               ))}
             </div>
 
-            {/* Address Video */}
             <div className="mt-8 rounded-2xl overflow-hidden border border-border">
               <video
                 src="/videos/address-video.mp4"
@@ -45,31 +45,33 @@ const ContactSection = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <form className="lg:col-span-3 bg-card border border-border rounded-2xl p-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
-                <Input placeholder="Your name" className="rounded-lg" />
+          <ScrollReveal variant="fade-right" className="lg:col-span-3">
+            <form className="bg-card border border-border rounded-2xl p-8 space-y-5 h-full" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
+                  <Input placeholder="Your name" className="rounded-lg" />
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
+                  <Input placeholder="+91 XXXXX XXXXX" className="rounded-lg" />
+                </div>
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
-                <Input placeholder="+91 XXXXX XXXXX" className="rounded-lg" />
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                <Input type="email" placeholder="you@company.com" className="rounded-lg" />
               </div>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-              <Input type="email" placeholder="you@company.com" className="rounded-lg" />
-            </div>
-            <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-              <Textarea rows={4} placeholder="Product type, quantity, delivery timeline..." className="rounded-lg" />
-            </div>
-            <Button type="submit" size="lg" className="w-full bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-full">
-              Send Enquiry
-            </Button>
-          </form>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
+                <Textarea rows={4} placeholder="Product type, quantity, delivery timeline..." className="rounded-lg" />
+              </div>
+              <Button type="submit" size="lg" className="w-full bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-full">
+                Send Enquiry
+              </Button>
+            </form>
+          </ScrollReveal>
         </div>
       </div>
     </section>
