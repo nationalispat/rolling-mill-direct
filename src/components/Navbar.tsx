@@ -15,12 +15,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-xl border-b border-gold-subtle">
-      <div className="container flex items-center justify-between h-16 md:h-[76px]">
-        <a href="#home" className="flex items-center gap-3">
-          <img src={logoIcon} alt="National Ispat Udyog" className="h-9 w-auto" />
-          <span className="font-heading text-sm md:text-base font-bold text-foreground tracking-tight leading-tight">
-            NATIONAL<br className="md:hidden" /> <span className="text-gold">ISPAT</span> UDYOG
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <div className="container flex items-center justify-between h-16 md:h-[72px]">
+        <a href="#home" className="flex items-center gap-2.5">
+          <img src={logoIcon} alt="National Ispat Udyog" className="h-8 w-auto" />
+          <span className="font-heading text-sm md:text-base font-extrabold text-foreground tracking-tight leading-tight">
+            NATIONAL<br className="md:hidden" /> <span className="text-steel">ISPAT</span> UDYOG
           </span>
         </a>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-[13px] rounded-full px-6 shadow-premium">
+          <Button size="sm" className="bg-foreground text-background hover:bg-foreground/90 font-medium text-[13px] rounded-full px-5">
             Get Quote
           </Button>
         </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-gold-subtle pb-4">
+        <div className="md:hidden bg-background border-t border-border pb-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -57,7 +57,7 @@ const Navbar = () => {
             </a>
           ))}
           <div className="px-6 pt-2">
-            <Button size="sm" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold rounded-full shadow-premium">
+            <Button size="sm" className="w-full bg-foreground text-background hover:bg-foreground/90 font-medium rounded-full">
               Get Quote
             </Button>
           </div>

@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Playfair Display", "serif"],
+        heading: ["Plus Jakarta Sans", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
       colors: {
@@ -58,10 +58,6 @@ export default {
         forge: {
           DEFAULT: "hsl(var(--forge))",
           dark: "hsl(var(--forge-dark))",
-        },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
