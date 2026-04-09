@@ -1,10 +1,39 @@
+import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import ScrollReveal from "./ScrollReveal";
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name || !form.email || !form.message) {
+      toast({ title: "Please fill all required fields", variant: "destructive" });
+      return;
+    }
+    setLoading(true);
+    const { error } = await supabase.from("enquiries").insert({
+      name: form.name,
+      phone: form.phone || null,
+      email: form.email,
+      message: form.message,
+    });
+    setLoading(false);
+    if (error) {
+      toast({ title: "Failed to send enquiry", description: error.message, variant: "destructive" });
+    } else {
+      toast({ title: "Enquiry sent successfully!", description: "We'll get back to you soon." });
+      setForm({ name: "", phone: "", email: "", message: "" });
+    }
+  };
+
   return (
     <section id="contact" className="py-24 md:py-32 bg-section-alt overflow-hidden">
       <div className="container">
@@ -48,27 +77,27 @@ const ContactSection = () => {
           </ScrollReveal>
 
           <ScrollReveal variant="fade-right" className="lg:col-span-3">
-            <form className="bg-card border border-border rounded-2xl p-8 space-y-5 h-full" onSubmit={(e) => e.preventDefault()}>
+            <form className="bg-card border border-border rounded-2xl p-8 space-y-5 h-full" onSubmit={handleSubmit}>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
-                  <Input placeholder="Your name" className="rounded-lg" />
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">Name *</label>
+                  <Input placeholder="Your name" className="rounded-lg" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
-                  <Input placeholder="+91 XXXXX XXXXX" className="rounded-lg" />
+                  <Input placeholder="+91 XXXXX XXXXX" className="rounded-lg" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
                 </div>
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-                <Input type="email" placeholder="you@company.com" className="rounded-lg" />
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Email *</label>
+                <Input type="email" placeholder="you@company.com" className="rounded-lg" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-                <Textarea rows={4} placeholder="Product type, quantity, delivery timeline..." className="rounded-lg" />
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Message *</label>
+                <Textarea rows={4} placeholder="Product type, quantity, delivery timeline..." className="rounded-lg" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
               </div>
-              <Button type="submit" size="lg" className="w-full bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-full">
-                Send Enquiry
+              <Button type="submit" size="lg" disabled={loading} className="w-full bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-full">
+                {loading ? "Sending..." : "Send Enquiry"}
               </Button>
             </form>
           </ScrollReveal>
