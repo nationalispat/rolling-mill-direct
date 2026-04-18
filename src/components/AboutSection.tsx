@@ -13,7 +13,7 @@ const AboutSection = () => {
               loading="lazy"
               width={1280}
               height={960}
-              className="rounded-2xl w-full object-cover aspect-[3/4]"
+              className="rounded-2xl w-full h-auto object-contain"
             />
           </ScrollReveal>
 

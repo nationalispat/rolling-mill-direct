@@ -41,7 +41,7 @@ const ProductsSection = () => {
               loading="lazy"
               width={1280}
               height={960}
-              className="rounded-2xl w-full object-cover aspect-[3/4] lg:sticky lg:top-24"
+              className="rounded-2xl w-full h-auto object-contain lg:sticky lg:top-24"
             />
           </ScrollReveal>
 
